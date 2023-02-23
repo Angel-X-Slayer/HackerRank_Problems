@@ -994,10 +994,45 @@
 # print(c)
 
 
-a=[1,3,2,6,1,7,5]
-b=[7,6,5,4,3,2,1]
-sorted(a, key= lambda x: )
+# a=[1,3,2,6,1,7,5]
+# b=[7,6,5,4,3,2,1]
+# sorted(a, key= lambda x: )
 
 
+# a={1:[1,2,3,4],2:[6,7,8,9]}
+# print(a[1])
+
+# op=[]
+#         for i in usernames:
+#             k=[]
+#             l1=dict(Counter(i))
+#             for j in range(0,len(i),2):
+#                 k.append(i[j])
+#             for i in k:
+#                 if i in l1.keys():
+#                     op1=self.find_prime(l1[i])
+#                     if op1==True:
+#                         op.append(0)
+#                     else:
+#                         op.append(1)
+#         return(op)
 
 
+# a1={'a':2,'b':1,'c':3}
+# print(sum(a1.values()))
+def minTrees(n, k):
+  if k == 0 or n == 0 or n > k*(k+1)/2:
+    return -1
+  if n == 1:
+    return 0
+  if n <= k+1:
+    return 1
+  while n > 0 and k > 0:
+    n -= k
+    k -= 1
+  if n == 0:
+    return k
+  else:
+    return k+1
+
+print(minTrees(64, 13))
